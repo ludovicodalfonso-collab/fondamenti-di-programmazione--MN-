@@ -4,6 +4,11 @@ from wall import create_wall
 
 
 def create_maze():
+    '''
+    Create a maze using a web service.
+    This function sends a request to a maze generation service and processes the response.
+    It produces a list of wall objects, to be displayed in the game
+    '''
     wall_list = []
     maze = requests.post('http://www.delorie.com/game-room/mazes/genmaze.cgi',
                           data={'cols': N_COLS, 'rows': N_ROWS, 'type': 'text'})

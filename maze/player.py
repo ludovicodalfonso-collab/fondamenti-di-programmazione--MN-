@@ -10,7 +10,11 @@ def create_player():
     surf = pygame.transform.rotate(player_image, 90)
     rect = surf.get_rect()
     rect.center = [10, WALL_DY + WALL_DY/2]
-    return {"surf": surf, "rect": rect, "v": 3, "direction": 90}
+    return {"surf": surf, "rect": rect, "v": 3, "direction": 90} 
+    # nota: 
+    # questo modulo è un po' come una classe nella programmazione ad oggetti.
+    # questo dizionario è un po' come il self.
+    # vedi anche come viene utilizzato nel resto del codice.
 
 def update_player(player, pressed_keys, wall_list, flag):
     dx = 0
@@ -47,3 +51,6 @@ def update_player(player, pressed_keys, wall_list, flag):
     if player["rect"].colliderect(flag["rect"]):
         return True
     return False
+
+def fire_player(player):
+    print('fire')

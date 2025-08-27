@@ -10,7 +10,7 @@ Questa parte copre 48 ore di lezione, secodo lo schema seguente:
 * [Leggere codice Python](./lez_3/read_python.ipynb) (~18 ore)
 * [Testing e Debugging](./slides/04.%20Testing%20and%20Debugging.pdf) (~3 ore)
 * Problem Decomposition (~6 ore)
-* GIT e Ambienti virtuali (~6 ore)
+* [Ambienti virtuali e GIT](./slides/06.%20Virtual%20Environments%20and%20GIT.pdf) (~6 ore)
 * Esercizi (~6 ore)
 
 Diversi argomenti del corso sono anche in questa [Playlist di Youtube](https://www.youtube.com/playlist?list=PLq7ZLL2vUuRsuWFMwOShNzno2PdjQbIGI).
