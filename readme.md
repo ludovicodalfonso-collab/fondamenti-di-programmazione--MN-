@@ -14,7 +14,7 @@ Questa parte copre 48 ore di lezione, secodo lo schema seguente:
 * Esercizi (~6 ore)
 
 Diversi argomenti del corso sono anche in questa [Playlist di Youtube](https://www.youtube.com/playlist?list=PLq7ZLL2vUuRsuWFMwOShNzno2PdjQbIGI).
-Tuttavia questa è stata registrata circa nel 3 a.C  - avanti ChatGPT - per cui il focus era un po' diverso :-)
+Tuttavia questa è stata registrata circa nell'anno 3 a.C  - avanti ChatGPT - per cui il focus era un po' diverso :-)
 
 
 
