@@ -1,0 +1,84 @@
+# crea un dizionario per memorizzare i dati di libri di una biblioteca
+# ogni libro ha un id, un titolo, un autore e l'informazione sul fatto che sia in prestito o meno
+
+
+# crea un dizionario per memorizzare i dati degli utenti della biblioteca
+
+
+# crea un dizionario per memorizzare i prestiti con la data di prestito e restituzione e gli id della persona e del libro
+
+
+
+def aggiungi_libro(titolo, autore):
+    '''
+    Aggiunge un nuovo libro al catalogo.
+    '''
+
+
+def aggiungi_utente(nome, email):
+    '''
+    Aggiunge un nuovo utente alla biblioteca.
+    '''
+
+def _cerca_libro(titolo):
+    '''
+    Cerca un libro nel catalogo per titolo.
+    Restituisce l'id del libro se trovato, altrimenti None.
+    >>> _cerca_libro('1984')
+    1
+    '''
+
+def _cerca_utente(email):
+    '''
+    Cerca un utente nel catalogo per email.
+    Restituisce l'id dell'utente se trovato, altrimenti None.
+    >>> _cerca_utente('mario.rossi@example.com')
+    1
+    >>> _cerca_utente('xxx@example.com')
+    '''
+
+def presta_libro(id_libro, id_utente, data_prestito):
+    '''
+    Registra il prestito di un libro a un utente.
+    Restituisce True se il prestito è stato registrato con successo, altrimenti False.
+    >>> presta_libro(1, 1, "2023-01-15")
+    True
+    >>> presta_libro(1, 2, "2023-01-16")
+    False
+    '''
+
+def _cerca_prestito(id_libro,id_utente):
+    '''
+    Cerca il prestito con un determinato id_libro e id_utente. 
+    Il prestito deve avere il campo data_restituzione == ''
+    Restituisce l'id del prestito
+    >>> _cerca_prestito(1, 1)
+
+    >>> _cerca_prestito(2, 2)
+    2
+    '''
+
+
+def _calcola_penale_restituzione(id_prestito):
+    '''
+    Calcola la penale per la restituzione di un libro in ritardo.
+    La penale è di 1 euro per ogni giorno di ritardo.
+    Il ritardo inizia dopo 30 giorni di prestito. 
+    Restituisce l'importo della penale, oppure 0 se il libro è stato restituito in tempo.
+    >>> _calcola_penale_restituzione(1)
+    0
+    >>> _calcola_penale_restituzione(3)
+    3
+    '''
+
+def restituisci_libro(id_libro, id_utente, data_restituzione):
+    '''
+    cerca il prestito attivo per il libro e l'utente forniti
+    aggiorna il prestito con la data di restituzione
+    aggiorna lo stato del libro
+    restituisci la penale
+    >>> restituisci_libro(1, 1, "2023-01-22")
+    0
+    >>> restituisci_libro(2, 2, "2023-02-22")
+    3
+    '''

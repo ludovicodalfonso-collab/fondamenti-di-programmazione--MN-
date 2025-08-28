@@ -9,7 +9,7 @@ Questa parte copre 48 ore di lezione, secodo lo schema seguente:
 * [Introduzione a Python](./slides/02.%20Python%20Intro.pdf) (~6 ore)
 * [Leggere codice Python](./lez_3/read_python.ipynb) (~18 ore)
 * [Testing e Debugging](./slides/04.%20Testing%20and%20Debugging.pdf) (~3 ore)
-* Problem Decomposition (~6 ore)
+* [Problem Decomposition](./slides/05.%20Problem%20Decompositon.pdf) (~6 ore)
 * [Ambienti virtuali e GIT](./slides/06.%20Virtual%20Environments%20and%20GIT.pdf) (~6 ore)
 * Esercizi (~6 ore)
 

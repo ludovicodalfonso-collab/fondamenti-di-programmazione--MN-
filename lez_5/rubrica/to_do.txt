@@ -1,0 +1,27 @@
+Aggiungere ricerca case-insensitive con più risultati.
+Vogliamo:
+* Ignorare maiuscole/minuscole (case-insensitive): “ali”, “ALI”, “Ali” → tutti equivalenti.
+* Restituire tutti i risultati (non solo il primo): una lista di contatti il cui nome contiene la query.
+* Ordinare i risultati (es. per nome), così l’output è stabile e leggibile.
+Esempio:
+Rubrica: Alice, Alina, Bob.
+Query: ali → risultati: [Alice, Alina].
+
+
+********
+
+Vogliamo rendere il codice più modulare
+
+********
+
+
+rubrica/
+├─ main.py               # entry point (solo avvio CLI)
+├─ ui/
+│  └─ cli.py             # loop comandi, I/O utente
+├─ domain/
+│  ├─ validators.py      # validazioni coese (con doctest)
+│  └─ services.py        # funzioni di dominio: aggiungi, cerca, lista, tag… (con doctest)
+└─ infra/
+   ├─ repository.py      # persistenza JSON (funzioni: load/save)
+   └─ csv_io.py          # import/export CSV (funzioni pure)

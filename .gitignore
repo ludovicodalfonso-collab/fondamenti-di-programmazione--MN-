@@ -3,3 +3,4 @@ stuff/
 **secret**
 __pycache__/
 venv/
+secret/
