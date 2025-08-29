@@ -1,0 +1,28 @@
+'''
+modulo per rappresentare la scacchiera del gioco del tris.
+il modulo fornisce le seguenti funzioni:
+- crea scacchiera. Crea una lista di liste 3*3 per rappresentare la scacchiera
+- metti_pedina(i,j,id) riceve le coordinate dove mettere la pedina: i,j e l'id del giocatore/tipo di pedina che tipicamente sarà 'X' o 'O'. la funzione ritorna True se la mossa è valida, False altrimenti
+- tris(id) riceve l'id di un giocatore e rispode True o False a seconda che sia verifcato un tris
+- ce_spazio() dice se la scacchiera è piena e quindi non si può più goicare.
+Queste funzioni non devono stampare niente, gestiscono solo lo stato della scacchiera e le funzioni corrispondenti
+'''
+'''
+>>> s = crea_scacchiera()
+>>> metti_pedina(s, 4, 4, 'X')
+False
+'''
+
+'''
+Modulo per rappresentare un giocatore umano del gioco del tris.
+Il modulo ha le seguenti funzioni:
+funzione crea_giocatore(id, scacchiera) e imposta l'id del giocatore che tipicamente sarà 'X' o 'O'. Riceve anche la scacchiera a cui è collegato il giocatore
+funzione gioca() per chiedere tramite input e trasmette la mossa alla scacchiera
+'''
+
+'''
+Modulo gameplay. Contiene 3 funzioni
+- funzione crea_partita(giocatore1, giocatore2, scacchiera)
+- funzione print() che stampa la scacchiera
+- funzione play() con il ciclo di gioco
+'''
