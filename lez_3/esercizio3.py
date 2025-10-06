@@ -4,8 +4,13 @@ def insersci_numero():
     questa funzione chiede un numero come input al giocatore
     e restituisce il numero inserito
     '''
-    numero = int(input("Inserisci un numero: "))
-    return numero
+    while True:
+        try:
+            numero = int(input("Inserisci un numero: "))
+            return numero
+        except:
+            print('Input non valido')
+    
 
 
 def genera_numero_casuale(min_int=1, max_int=100):
