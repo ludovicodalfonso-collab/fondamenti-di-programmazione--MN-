@@ -4,7 +4,7 @@ def inserisci_punto():
     '''
     x = int(input("Inserisci la coordinata x: "))
     y = int(input("Inserisci la coordinata y: "))
-    return (x, y)
+    return [x, y]
 
 def inserisci_rettangolo():
     '''
@@ -13,7 +13,7 @@ def inserisci_rettangolo():
     '''
     x1,y1 = inserisci_punto()
     x2,y2 = inserisci_punto()
-    return (x1,y1,x2,y2)    
+    return  [x1,y1,x2,y2]   
 
 
 def posizione_relativa(xA,yA,xB,yB, 
