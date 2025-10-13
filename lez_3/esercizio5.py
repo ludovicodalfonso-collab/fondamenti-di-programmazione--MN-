@@ -4,7 +4,7 @@ def inserisci_punto():
     '''
     x = int(input("Inserisci la coordinata x: "))
     y = int(input("Inserisci la coordinata y: "))
-    return [x, y]
+    return (x, y)
 
 def inserisci_rettangolo():
     '''
