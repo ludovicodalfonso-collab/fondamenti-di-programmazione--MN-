@@ -1,0 +1,14 @@
+Nome:A
+Valori:1,2,3,4
+
+Nome:A
+
+
+
+
+
+Valori:6,2,6
+
+Nome:C
+
+Valori:7,7
