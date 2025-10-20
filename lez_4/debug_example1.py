@@ -4,8 +4,7 @@
 Reads a text file and prints the top 5 most frequent words.
 """
 
-import re
-from collections import defaultdict
+
 
 def read_file(path="sample.txt"):
     with open(path, "r") as f:
@@ -15,7 +14,7 @@ def tokenize(text):
     return text.split()
 
 def count_words(words):
-    freq = defaultdict(int)
+    freq = {}
     for w in words:
         w = w.lower()
         freq[w] =+ 1

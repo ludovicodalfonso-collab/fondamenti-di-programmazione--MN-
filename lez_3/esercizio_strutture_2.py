@@ -1,4 +1,6 @@
 
+import json
+
 def stampa_menu():
     '''
     1. Inserisci Studente
@@ -59,6 +61,7 @@ def calcola_media():
             print(f"Media voti di {nome}: {media:.2f}")
 
 def main():
+
     while True:
         stampa_menu()
         scelta = input("Scegli un'opzione (1-5): ")
@@ -72,9 +75,17 @@ def main():
             calcola_media()
         elif scelta == '5':
             print("Uscita dal programma.")
+            with open("data/classe.json", "w") as f:
+                json.dump(classe, f)
             break
         else:
             print("Scelta non valida. Riprova.")
 
 classe = {}
+try:
+    with open("data/classe.json", "r") as f:
+        classe = json.load(f)
+except:
+    classe = {}
+
 main()
