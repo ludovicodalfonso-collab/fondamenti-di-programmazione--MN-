@@ -17,10 +17,24 @@ def salva_mappa(file_path, mappa):
 
 def main():
     template = leggi_template('lez_3/leaflet/leaflet.template')
-    locations = [
-        (44.63276, 10.871231, "Cognento"),
-        (44.83276, 10.871231, "Cognento2")
-    ]
+    locations = []
+    lat = 44.63276
+    lon = 10.871231
+    for _ in range(10):
+        locations.append((lat, lon, f"Ciao"))
+        lat += 0.01
+    for _ in range(10):
+        locations.append((lat, lon, f"Ciao"))
+        lon += 0.01
+    for _ in range(10):
+        locations.append((lat, lon, f"Ciao"))
+        lat -= 0.01
+    for _ in range(10):
+        locations.append((lat, lon, f"Ciao"))
+        lon -= 0.01
+    
     placemarks = genera_placemarks(locations)
     mappa = sostituisci_placemarks(template, placemarks)
-    salva_mappa('lez_3/leaflet/leaflet.html', mappa)
+    salva_mappa('lez_3/leaflet/output.html', mappa)
+
+main()
