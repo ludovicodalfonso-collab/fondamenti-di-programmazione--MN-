@@ -17,7 +17,7 @@ def stampa_menu():
     5. Esci
     ''')
 
-def inserisci_studente():
+def inserisci_studente(classe):
     nome = input("Nome studente e cognome: ")
     if nome in classe:
         print("Studente già esistente.")
@@ -66,7 +66,7 @@ def main():
         stampa_menu()
         scelta = input("Scegli un'opzione (1-5): ")
         if scelta == '1':
-            inserisci_studente()
+            inserisci_studente(classe)
         elif scelta == '2':
             aggiungi_voto()
         elif scelta == '3':
