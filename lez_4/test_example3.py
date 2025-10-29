@@ -4,10 +4,10 @@ def total_passing_yards(filename, player):
     We want to make a function that takes in the filename of the dataset and
     the name of a player as input and then outputs the total number of passing yards that
     player achieved in the dataset.
-    The file is a csm file with an header and 8 or more columns.
+    The file is a csv file with an header and 8 or more columns.
     Column 4 is the player's name and column 8 is the number of passing yards for that player
 
-    >>> total_passing_yards('_4_test_example3_data.txt', 'Marco')
+    >>> total_passing_yards('lez_4/test_example3_data.txt', 'Marco')
     350
     '''
 

@@ -23,4 +23,4 @@ def most_students(classroom):
 
 
 import doctest
-doctest.testmod(verbose=False)
+doctest.testmod(verbose=True)

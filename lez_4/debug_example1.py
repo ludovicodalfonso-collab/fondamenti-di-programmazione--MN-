@@ -1,9 +1,9 @@
 # simple_wordcount_buggy.py
 
 """
-Reads a text file and prints the top 5 most frequent words.
+Reads a text file and prints the top 5 most 
+frequent words.
 """
-
 
 
 def read_file(path="sample.txt"):
@@ -11,13 +11,19 @@ def read_file(path="sample.txt"):
         return f.read()
 
 def tokenize(text):
+    '''Tokenizes the input text into words.
+    remove punctuation and special characters'''
+    text = ''.join([c for c in text if c.isalnum() or c.isspace()])
     return text.split()
-
+    
 def count_words(words):
     freq = {}
     for w in words:
         w = w.lower()
-        freq[w] =+ 1
+        if w in freq:
+            freq[w] += 1
+        else:
+            freq[w] = 1
     return freq
 
 def main():

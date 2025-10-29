@@ -22,4 +22,4 @@ def longest_word(words):
     return longest
 
 import doctest
-doctest.testmod(verbose=False)
+doctest.testmod(verbose=True)

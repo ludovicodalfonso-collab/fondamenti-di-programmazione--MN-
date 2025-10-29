@@ -29,10 +29,20 @@ def stampa_matrice(m):
 def trova_riga_somma_massima(m):
     '''
     restituisce una lista con la riga di somma massima
+    >>> trova_riga_somma_massima([[1,2,3],\
+                                  [4,5,6],\
+                                  [7,8,9]])
+    [7, 8, 9]
+    >>> trova_riga_somma_massima([[10,2,3]])
+    [10, 2, 3]
+    >>> trova_riga_somma_massima([])
+    
+    >>> trova_riga_somma_massima([[-1]])
+    [-1]
     '''
-    riga_massima = [0]
+    riga_massima = None
     for r in m:
-        if sum(r) > sum(riga_massima):
+        if riga_massima is None or sum(r) > sum(riga_massima):
             riga_massima = r
     return riga_massima
 
@@ -46,6 +56,9 @@ def trova_colonna_somma_massima(m):
         if sum(c) > sum(colonna_massima):
             colonna_massima = c
     return colonna_massima
+
+import doctest
+doctest.testmod(verbose=True)
 
 
 m = leggi_matrice()
