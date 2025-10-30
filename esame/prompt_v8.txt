@@ -1,0 +1,20 @@
+Scrivi un quiz avanzto per studenti universitari sul linguaggio python.
+Il quiz a scelta multipla ha 8 domande.
+Metti degli spezzoni di codice nelle domande che possono essere del tipo: 
+- calcola l'output
+- trova l'errore / correggi modifca riga (in questo caso devi spiegare cosa deve fare il programma). Ci deve essere *sempre una sola* riga sbagliata. Non indicare qual'è la riga
+
+Scegli tu, quale tipo, fai un misto.
+
+Metti spezzoni di codice abbastanza lunghi circa 20 righe così che NON sia facile orientarsi nel codice.
+Compatta sempre le print in modo che le print occupino poche righe.
+Gli argomenti delle domande sono:
+- 3 domande sulle strutture dati - liste e dizionari. Fai domande difficili con strutture complesse, comprehension, slicing, etc.
+- 2 domande sugli algoritmi, non mettere ordinamenti o ricerche avanzate, ma comunque domande difficili
+- 1 domande sui file e cartelle non semplici, usa with, usa solo open e os.path.isFile. Esempi: esplorazione file system, leggi-scrvi file, cartelle annidate, etc. Può essere un testo lungo
+- 1 domande sulle funzioni con anche funzioni come first-class entity, lambda, e decoratori, usa più righe di codice
+- 1 domande sulla programmazione ad oggetti: costruttore, polimorfismo, ereditariterà singola. difficile. Può essere un testo lungo
+Non mettere espressioni troppo intricate. Ad esempio una comprehension con 2 cicli for è troppo intricata.
+Usa solo i comandi che sono presenti nel ipynb allegato.
+
+

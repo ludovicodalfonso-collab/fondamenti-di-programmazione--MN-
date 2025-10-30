@@ -1,0 +1,14 @@
+Scrivi un quiz avanzto per studenti universitari sul linguaggio python.
+Il quiz a scelta multipla ha 11 domande.
+Metti degli spezzoni di codice nelle domande che possono essere del tipo: 
+- calcola l'output
+- trova l'errore  (in questo caso devi spiegare cosa deve fare il programma). Ci deve essere *sempre una sola* riga sbagliata. Non indicare qual'è la riga
+
+Scegli tu, quale tipo, fai un misto.
+
+Gli argomenti delle domande sono:
+- 3 domande sulle strutture dati - liste e dizionari. Fai domande difficili con strutture complesse, comprehension, slicing, etc.
+- 3 domande sugli algoritmi, non mettere ordinamenti o ricerche avanzate, ma comunque domande difficili
+- 1 domande sui file e cartelle non semplici, in particolare con il costrutto with
+- 2 domande sulle funzioni con anche funzioni come first-class entity, lambda, e decoratori
+- 2 domande sulla programmazione ad oggetti: costruttore, polimorfismo, ereditariterà singola
