@@ -1,5 +1,5 @@
 
-def studente(nome, eta):
+def crea_studente(nome, eta):
     return {"nome": nome, "eta": eta, "voti": []}
 
 def aggiungi_voto(studente, voto): 

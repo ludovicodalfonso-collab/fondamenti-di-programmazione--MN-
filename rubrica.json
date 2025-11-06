@@ -1,0 +1,24 @@
+{
+  "Alice": {
+    "telefono": "12345",
+    "email": "alice@example.com",
+    "tags": []
+  },
+  "Bob": {
+    "telefono": "+39 333 555-777",
+    "email": null,
+    "tags": []
+  },
+  "marco": {
+    "telefono": "3471111111",
+    "email": null,
+    "tags": [
+      "università"
+    ]
+  },
+  "Matteo": {
+    "telefono": "3491111111",
+    "email": null,
+    "tags": []
+  }
+}

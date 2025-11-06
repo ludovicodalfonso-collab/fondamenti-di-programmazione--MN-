@@ -91,18 +91,64 @@ def cerca_prestito(id_user, id_libro):
     return None
 
 
+def lista_libri_disponibili():
+    '''
+    restituisce la lista dei titoli dei libri non in prestito.
+    '''
+    return [libro['titolo'] for libro in biblioteca if not libro['in_prestito']]
+
+
+def calcola_penale(data_prestito, data_restituzione):
+    '''
+    La funzione riceve la data del prestito e la data di restituzione.
+    Calcola la penale in base ai giorni di ritardo.
+    Restituisce la penale (0 se non c'è ritardo).
+    '''
+    from datetime import datetime, timedelta
+
+    formato_data = "%Y-%m-%d"
+    data_prestito_dt = datetime.strptime(data_prestito, formato_data)
+    data_restituzione_dt = datetime.strptime(data_restituzione, formato_data)
+
+    giorni_permitted = 30
+    data_scadenza = data_prestito_dt + timedelta(days=giorni_permitted)
+
+    if data_restituzione_dt > data_scadenza:
+        giorni_ritardo = (data_restituzione_dt - data_scadenza).days
+        penale = giorni_ritardo * 0.50  # 0.50 euro al giorno di ritardo
+        return penale
+    else:
+        return 0.0
+
 def restituisci_libro(id_user, id_libro, data_restituzione):
     '''
     La funzione riceve l'id di un utente e l'id di un libro e la data di restituzione.
     Controlla se effettivamente l'utente ha in prestito quel libro.
     Se sì, aggiorna lo stato del libro a non in prestito e rimuove il prestito.
-    Restituisce True se il libro è stato restituito, False altrimenti.
+    Restituisce le date del prestito e della restituzione se il libro è stato restituito, False altrimenti.
     '''
     prestito = cerca_prestito(id_user, id_libro)
     if prestito:
         for libro in biblioteca:
             if libro['id'] == id_libro:
                 libro['in_prestito'] = False
+                date = (prestito['data_prestito'], data_restituzione)
                 prestiti.remove(prestito)
-                return True
+                return date
     return False
+
+
+def cerca_libri_in_prestito(id_user, titolo):
+    '''
+    La funzione riceve l'id di un utente e il titolo di un libro.
+    Ritorna la lista degli id dei libri con quel titolo che
+    l'utente ha in prestito.
+    '''
+    libri_in_prestito = []
+    for prestito in prestiti:
+        if prestito['id_utente'] == id_user:
+            for libro in biblioteca:
+                if libro['id'] == prestito['id_libro'] and libro['titolo'] == titolo:
+                    libri_in_prestito.append(libro['id'])
+
+    return libri_in_prestito
